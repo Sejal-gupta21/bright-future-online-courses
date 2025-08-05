@@ -1,0 +1,239 @@
+/* details.component.css - Updated to match provided image */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2b253b; /* Dark theme background */
+  color: #f0f0f0; /* Default light text color */
+  min-height: 100vh;
+}
+
+.container { 
+  max-width: 1200px; /* Adjust container width */
+  padding-top: 0; /* No top padding for hero section */
+  padding-bottom: 3rem; /* Bottom padding */
+}
+
+/* Hero Section (Upper Half) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Fixed height for the hero image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 1.5rem; /* Rounded corners for the whole hero section */
+  overflow: hidden; /* Important for containing image and gradient */
+  margin-bottom: 2rem; /* Space below hero section */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for the hero */
+}
+
+/* Gradient Overlay on Hero Image */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%; /* Gradient covers left half */
+  height: 100%;
+  background: linear-gradient(to right, rgba(26, 21, 39, 0.9), rgba(26, 21, 39, 0.3) 70%, transparent); /* Dark gradient from left */
+  z-index: 1;
+}
+
+/* Content over Hero Image */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Above gradient */
+  color: #fff;
+  max-width: 60%; /* Constrain content width */
+}
+
+.hero-course-title {
+  font-size: 3.5rem; /* Large, bold title */
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+.hero-price {
+  font-size: 2.5rem; /* Large price */
+  font-weight: 700;
+  color: #4CAF50; /* Green color for price */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Buy Now Button on Hero */
+.btn-buy-now-hero {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%); /* Blue to pink gradient */
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2.5rem; /* More rounded pill shape */
+  box-shadow: 0 5px 20px rgba(106,130,251,0.4);
+  padding: 1rem 3rem; /* Larger padding for button */
+  font-size: 1.2rem;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.btn-buy-now-hero:hover {
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%); /* Reverse gradient */
+  box-shadow: 0 8px 25px rgba(252,92,125,0.5);
+  transform: translateY(-5px); /* More pronounced lift */
+}
+
+/* Main Content Area (Lower Half) */
+.main-content-area {
+  background-color: #221c33; /* Dark panel background */
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+}
+
+/* About Section */
+.about-course-section {
+  margin-bottom: 2.5rem;
+}
+.about-course-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c2e9fb; /* Light blue heading */
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.about-course-section p {
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Additional Info Section (Right Panel Style in lower half) */
+.additional-info-panel {
+  background-color: #3b334d; /* Slightly different dark background */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  height: 100%; /* Take full height of its column */
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start; /* Align icon to top of text */
+  margin-bottom: 1.2rem; /* Space between items */
+  color: #d0d0d0;
+  font-size: 0.95rem;
+}
+.info-item .material-icons {
+  font-size: 1.4rem; /* Larger icons */
+  margin-right: 1rem;
+  color: #c2e9fb; /* Light blue for icons */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.info-item strong {
+  color: #f0f0f0; /* White for labels */
+}
+
+/* Loading/Error State Styling (consistent) */
+.status-message-card {
+  background-color: #3b334d;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 3rem;
+  text-align: center;
+  color: #f0f0f0;
+}
+.spinner-border-custom {
+  width: 4rem;
+  height: 4rem;
+  border-width: 0.4em;
+  color: #c2e9fb;
+}
+.alert-custom {
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #f0f0f0;
+  background-color: rgba(220, 53, 69, 0.2);
+  border-color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) { /* Medium devices (md) and below */
+  .hero-section {
+    height: 350px; /* Reduce hero height */
+    padding: 2rem;
+    border-radius: 1rem; /* Smaller radius */
+    margin-bottom: 1.5rem;
+  }
+  .hero-section::before {
+    width: 100%; /* Gradient covers full width on mobile */
+    background: linear-gradient(to bottom, rgba(26, 21, 39, 0.9), rgba(26, 21, 39, 0.4) 70%, transparent); /* Vertical gradient */
+  }
+  .hero-content {
+    max-width: 100%; /* Content takes full width */
+    text-align: center; /* Center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-course-title {
+    font-size: 2.5rem;
+  }
+  .hero-price {
+    font-size: 2rem;
+  }
+  .btn-buy-now-hero {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+  .main-content-area {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .about-course-section h3, h4.content-heading {
+    font-size: 1.8rem;
+  }
+  .additional-info-panel {
+    margin-top: 2rem; /* Add space between content and info panel when stacked */
+  }
+}
+
+@media (max-width: 767px) { /* Small devices (sm) and below */
+  .hero-section {
+    height: 300px;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
+  .hero-course-title {
+    font-size: 2rem;
+  }
+  .hero-price {
+    font-size: 1.8rem;
+  }
+  .btn-buy-now-hero {
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+  }
+  .main-content-area {
+    padding: 1.5rem;
+  }
+  .about-course-section h3, h4.content-heading {
+    font-size: 1.5rem;
+  }
+  .about-course-section p {
+    font-size: 0.9rem;
+  }
+  .info-item {
+    font-size: 0.9rem;
+  }
+}
+.desc-white{
+  color: #f0f0f0;
+}

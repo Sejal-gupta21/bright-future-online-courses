@@ -1,0 +1,224 @@
+<app-navbar></app-navbar>
+<div class="container mt-4 mb-4">
+  <form
+    [formGroup]="enrollmentForm"
+    (ngSubmit)="onSubmit()"
+    novalidate
+    class="enrollment-card"
+  >
+    <h2 class="text-center fw-bold text-dark mb-5">Course Enrollment Form</h2>
+    <!-- User Name -->
+    <div class="mb-4">
+      <label for="fullName" class="form-label">{{ LABELS.USERNAME }}</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fullName"
+        formControlName="fullName"
+        [class.is-invalid]="isInvalid('fullName')"
+        (blur)="markTouched('fullName')"
+        autocomplete="off"
+        placeholder="e.g., John Doe"
+        appAutofocus
+      />
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('fullName')?.errors?.['required'] && (enrollmentForm.get('fullName')?.touched || enrollmentForm.get('fullName')?.dirty)"
+      >
+        Username is required.
+      </div>
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('fullName')?.errors?.['pattern'] && (enrollmentForm.get('fullName')?.touched || enrollmentForm.get('fullName')?.dirty)"
+      >
+        Enter a valid name (letters and spaces only).
+      </div>
+    </div>
+
+    <!-- Email Address -->
+    <div class="mb-4">
+      <label for="email" class="form-label">{{ LABELS.EMAIL }}</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+        [class.is-invalid]="isInvalid('email')"
+        (blur)="markTouched('email')"
+        autocomplete="off"
+        placeholder="e.g., your.email@example.com"
+      />
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('email')?.errors?.['required'] && (enrollmentForm.get('email')?.touched || enrollmentForm.get('email')?.dirty)"
+      >
+        Email is required.
+      </div>
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('email')?.errors?.['email'] && (enrollmentForm.get('email')?.touched || enrollmentForm.get('email')?.dirty)"
+      >
+        Enter a valid email address.
+      </div>
+    </div>
+
+    <!-- Phone Number -->
+    <div class="mb-4">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input
+        type="tel"
+        class="form-control"
+        id="phone"
+        formControlName="phone"
+        [class.is-invalid]="isInvalid('phone')"
+        (blur)="markTouched('phone')"
+        autocomplete="off"
+        placeholder="e.g., 1234567890"
+      />
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('phone')?.errors?.['required'] && (enrollmentForm.get('phone')?.touched || enrollmentForm.get('phone')?.dirty)"
+      >
+        Phone number is required.
+      </div>
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('phone')?.errors?.['pattern'] && (enrollmentForm.get('phone')?.touched || enrollmentForm.get('phone')?.dirty)"
+      >
+        Enter a valid 10-digit phone number.
+      </div>
+    </div>
+
+    <!-- Date of Birth & Gender -->
+    <div class="row mb-4 g-4">
+      <div class="col-md-6">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input
+          type="date"
+          class="form-control"
+          id="dob"
+          formControlName="dob"
+          [class.is-invalid]="isInvalid('dob')"
+          (blur)="markTouched('dob')"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="enrollmentForm.get('dob')?.errors?.['required'] && (enrollmentForm.get('dob')?.touched || enrollmentForm.get('dob')?.dirty)"
+        >
+          Date of Birth is required.
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="enrollmentForm.get('dob')?.errors?.['dateInFuture'] && (enrollmentForm.get('dob')?.touched || enrollmentForm.get('dob')?.dirty)"
+        >
+          Date of Birth cannot be in the future.
+        </div>
+        <div
+          class="invalid-feedback"
+          *ngIf="enrollmentForm.get('dob')?.errors?.['minAge'] && (enrollmentForm.get('dob')?.touched || enrollmentForm.get('dob')?.dirty)"
+        >
+          You must be at least 5 years old.
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Gender</label>
+        <div class="gender-options form-control-plaintext pt-0 pb-0 ps-0">
+          <div class="form-check">
+            <input
+              type="radio"
+              id="genderMale"
+              formControlName="gender"
+              value="Male"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="genderMale">Male</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="genderFemale"
+              formControlName="gender"
+              value="Female"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="genderFemale">Female</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="genderOther"
+              formControlName="gender"
+              value="Other"
+              class="form-check-input"
+            />
+            <label class="form-check-label" for="genderOther">Other</label>
+          </div>
+        </div>
+        <div
+          class="invalid-feedback d-block"
+          *ngIf="enrollmentForm.get('gender')?.errors?.['required'] && (enrollmentForm.get('gender')?.touched || enrollmentForm.get('gender')?.dirty)"
+        >
+          Please select your gender.
+        </div>
+      </div>
+    </div>
+
+    <!-- Prior Experience -->
+    <div class="mb-4">
+      <label for="priorExperience" class="form-label">Prior Experience</label>
+      <select
+        class="form-select"
+        id="priorExperience"
+        formControlName="priorExperience"
+        [class.is-invalid]="isInvalid('priorExperience')"
+        (blur)="markTouched('priorExperience')"
+      >
+        <option value="">Select...</option>
+        <option *ngFor="let exp of priorExperienceOptions" [value]="exp">
+          {{ exp }}
+        </option>
+      </select>
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('priorExperience')?.errors?.['required'] && (enrollmentForm.get('priorExperience')?.touched || enrollmentForm.get('priorExperience')?.dirty)"
+      >
+        Please select your experience level.
+      </div>
+    </div>
+
+
+    <!-- Terms & Conditions Checkbox -->
+    <div class="mb-5 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        formControlName="terms"
+        id="termsCheck"
+        [class.is-invalid]="isInvalid('terms')"
+        (blur)="markTouched('terms')"
+      />
+      <label class="form-check-label" for="termsCheck">
+        I agree to the
+        <a href="#" class="text-primary fw-medium">Terms & Conditions</a>
+      </label>
+      <div
+        class="invalid-feedback"
+        *ngIf="enrollmentForm.get('terms')?.errors?.['required'] && (enrollmentForm.get('terms')?.touched || enrollmentForm.get('terms')?.dirty)"
+      >
+        You must agree to the Terms & Conditions.
+      </div>
+    </div>
+
+    <!-- Form Actions -->
+<div class="footer-buttons">
+  <button class="btn btn-success" type="submit">
+    <span class="material-icons me-2">save</span>
+    {{ BUTTONS.SAVE }}
+  </button>
+  <button class="btn btn-back-custom" type="button" (click)="goBack()">
+    <span class="material-icons me-2">arrow_back</span> Back
+  </button>
+</div>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow p-4 hailu ">
+        <h2 class="mb-4 text-center">Secure Checkout</h2>
+
+        <!-- Google Pay Button: Shown when not processing and payment not yet successful -->
+        <div class="gpay-btn-center">
+          <google-pay-button
+            *ngIf="!isProcessing && !paymentSuccessful"
+            [environment]="'TEST'"
+            [paymentRequest]="paymentRequest"
+            (loadpaymentdata)="onLoadPaymentData($event)"
+            (error)="onError($event)"
+            [buttonColor]="'black'"
+            [buttonType]="'pay'"
+            [existingPaymentMethodRequired]="false"
+          ></google-pay-button>
+        </div>
+
+        <!-- Processing State: Shows a spinner and message while payment is being processed -->
+        <div *ngIf="isProcessing" class="text-center mt-3 payment-loader">
+          <mat-spinner diameter="40"></mat-spinner>
+          <div class="mt-3 load-heading">Processing payment...</div>
+        </div>
+
+        <!-- Success State: Shown when payment is successful -->
+        <div *ngIf="paymentSuccessful" class="text-center mt-3 success-state">
+          <span class="material-icons">check_circle</span>
+          <h4 class="mt-2">Payment Successful!</h4>
+          <p>You can now access your enrolled course.</p>
+          <button (click)="goToMyCourses()" class="btn btn-go-to-courses mt-3" [disabled]="enrolling">
+            <span *ngIf="enrolling" class="spinner-border spinner-border-sm me-2"></span>
+            Go to My Courses
+          </button>
+          <!-- Error shown if enrollment fails after payment -->
+          <div *ngIf="enrollError" class="alert alert-danger mt-3">{{ enrollError }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

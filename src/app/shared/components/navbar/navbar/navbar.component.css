@@ -1,0 +1,266 @@
+/* navbar.component.css - Modern Dark Theme Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* For running heading */
+
+/* Set global body background for the app to match login theme */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2b253b; /* Dark background from login page */
+  color: #f0f0f0; /* Default text color for body */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar background - Darker, subtle gradient */
+.navbar-custom {
+  background: linear-gradient(90deg, #221c33 0%, #1a1527 100%) !important; /* Darker gradient from login palette */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger dark shadow */
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+/* Navbar Brand - Keep original gradient, ensure it stands out on dark */
+.navbar-brand-gradient {
+  background: linear-gradient(90deg, #76bfce 30%, #699fb8 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 1.8rem; /* Slightly larger */
+  transition: transform 0.2s ease-in-out;
+}
+.navbar-brand-gradient:hover {
+  transform: scale(1.03);
+}
+
+/* Nav links (e.g., Home) */
+.nav-link-custom {
+  color: #08948d; /* Light blueish for links */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav-link-custom:hover, .nav-link-custom.active {
+  background-color: rgba(78, 80, 78, 0.1); /* Subtle highlight */
+  color: #faf3f3;
+}
+
+/* Search Bar Styling */
+.navbar-search-input {
+  background-color: #3b334d; /* Dark input background */
+  border: 1px solid #4f4762; /* Slightly lighter border */
+  color: #f0f0f0; /* Light text */
+  border-radius: 0.75rem; /* Rounded corners */
+  padding: 0.6rem 1rem;
+  width: 250px; /* Default width */
+  transition: width 0.3s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.navbar-search-input::placeholder {
+  color: #a0a0a0;
+}
+.navbar-search-input:focus {
+  width: 300px; /* Expand on focus */
+  border-color: #6a82fb; /* Blue border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(106, 130, 251, 0.25);
+  outline: none;
+}
+
+/* Categories Dropdown Button */
+.btn-categories {
+  background-color: #3b334d;
+  color: #f0f0f0;
+  border: 1px solid #4f4762;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn-categories:hover {
+  background-color: #4f4762;
+  border-color: #6a82fb;
+  color: #fff;
+}
+.btn-categories .material-icons {
+  font-size: 1.1rem;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu-dark-custom {
+  background-color: #221c33; /* Dark background */
+  border: 1px solid #4f4762;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.dropdown-item-dark-custom {
+  color: #f0f0f0;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-item-dark-custom:hover, .dropdown-item-dark-custom:focus {
+  background-color: #3b334d; /* Darker hover */
+  color: #c2e9fb; /* Light blue on hover */
+}
+
+
+/* Icon Buttons (Cart, Notifications) */
+.btn-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent white */
+  color: #c2e9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border: none;
+  box-shadow: none; /* No default shadow */
+}
+.btn-icon-circle:hover {
+  background-color: rgba(194, 233, 251, 0.15); /* Light blueish tint on hover */
+  transform: translateY(-2px);
+  color: #fff;
+}
+.btn-icon-circle:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(194, 233, 251, 0.25);
+}
+
+/* Profile button styling (re-adapted for dark theme) */
+.btn-profile-custom {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #3fb1c0 0%, #70d0e0 100%); /* Original vibrant gradient */
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 8px rgba(255, 210, 0, 0.35); /* Yellowish shadow */
+  transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+}
+.btn-profile-custom:hover {
+  box-shadow: 0 4px 16px rgba(255, 210, 0, 0.5); /* Enhanced shadow on hover */
+  background: linear-gradient(135deg, #686769 0%, #747473 100%); /* Grey gradient on hover */
+  transform: translateY(-2px);
+}
+
+/* Profile menu animation */
+.profile-menu-animated {
+  animation: fadeInMenu 0.2s forwards;
+  transform-origin: top right;
+  background-color: #2b253b; /* Dark menu background */
+  border: 1px solid #4f4762;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(-10px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Profile link styling */
+.profile-link-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: transparent; /* Start with transparent for items */
+  color: #f0f0f0; /* Light text */
+  font-weight: 500;
+  border-radius: 0.5rem; /* Consistent rounding */
+  margin: 0.3rem 0.7rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.9rem;
+}
+.profile-link-custom:hover {
+  background-color: #3b334d; /* Darker hover background */
+  color: #d1d7da; /* Light blue on hover */
+}
+
+.material-icons {
+  font-size: 1.3em;
+}
+
+/* Running Heading - Ensure visibility on dark background */
+.running-heading-container {
+  width: 100vw;
+  overflow: hidden;
+  margin: 2rem 0 1.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.running-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  /* Adjust gradient for better contrast on dark background */
+  background: linear-gradient(90deg, #6456b5 0%, #a94493 100%); /* Lighter, more vibrant gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: running-text 15s linear infinite;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  padding-bottom: 0.3em;
+  display: inline-block;
+  min-width: 120%; /* Increased min-width to prevent cutting off */
+}
+
+@keyframes running-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-120%); } /* Adjusted end point to ensure full text clears */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) { /* Tablet and smaller */
+  .navbar-search-input {
+    width: 100%; /* Full width search on mobile */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .navbar-search-input:focus {
+    width: 100%; /* Keep full width on focus */
+  }
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items */
+    align-items: flex-start; /* Align to left */
+  }
+  .nav-item {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .btn-categories {
+    width: 100%; /* Full width for categories button */
+  }
+  .dropdown-menu-dark-custom {
+    width: 100%; /* Full width dropdown */
+  }
+  .navbar-toggler {
+    color: #c2e9fb; /* Light color for toggler icon */
+    border-color: rgba(194, 233, 251, 0.2);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28194, 233, 251, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .running-heading {
+    font-size: 1.5rem;
+    animation-duration: 10s;
+  }
+}
+.home-ele{
+  cursor: pointer;
+}
+
+

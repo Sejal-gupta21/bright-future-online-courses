@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div class="container-fluid">
+    <!-- Brand Logo: Navigates to dashboard -->
+    <a class="navbar-brand navbar-brand-gradient" routerLink="/dashboard">Bright Future</a>
+    
+    <!-- Navbar Toggler for Mobile View -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left-aligned nav items (currently empty, can add links here) -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+      </ul> 
+
+      <!-- Right-aligned items -->
+      <div class="d-flex align-items-center ms-lg-auto mt-3 mt-lg-0">
+        <!-- Home Button -->
+        <button (click)="goToDashboard()" class="home-ele nav-link-custom d-flex align-items-center me-3">
+          <span class="material-icons me-1">home</span> Home
+        </button>
+
+        <!-- Cart Icon (future feature, currently commented out) -->
+        <!--
+        <button class="btn btn-icon-circle me-3" aria-label="Shopping Cart">
+          <span class="material-icons">shopping_cart</span>
+        </button>
+        -->
+
+        <!-- Notifications Icon (future feature, currently commented out) -->
+        <!--
+        <button class="btn btn-icon-circle me-3" aria-label="Notifications">
+          <span class="material-icons">notifications</span>
+        </button>
+        -->
+
+        <!-- Profile Button and Dropdown Menu -->
+        <div class="position-relative">
+          <button
+            class="btn btn-profile-custom rounded-circle d-flex align-items-center justify-content-center"
+            type="button"
+            (click)="toggleMenu()"
+            aria-label="Profile"
+          >
+            <span class="material-icons">account_circle</span>
+          </button>
+
+          <!-- Profile Dropdown: Shows when menuOpen is true -->
+          <div
+            class="dropdown-menu p-2 border-0 shadow-lg rounded-3 profile-menu-animated"
+            [class.show]="menuOpen"
+            *ngIf="menuOpen"
+            (mouseleave)="menuOpen = false"
+            style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 55px, 0px);"
+          >
+            <button class="dropdown-item profile-link-custom" (click)="goToMyCourses()">
+              <span class="material-icons">school</span>
+              My Courses
+            </button>
+            <button class="dropdown-item profile-link-custom" (click)="logout()">
+              <span class="material-icons">logout</span>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Running Heading: Welcome message below the navbar -->
+<div class="running-heading-container">
+  <h2 class="running-heading">
+    Welcome to Bright Future, your gateway to endless learning possibilities!
+  </h2>
+</div>

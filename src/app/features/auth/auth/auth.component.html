@@ -1,0 +1,192 @@
+<div class="container-fluid auth-page-container">
+  <div
+    class="row w-100 g-0 shadow-lg rounded-3 overflow-hidden"
+    style="max-width: 1200px"
+  >
+    <!-- Left Panel: Image Slider -->
+    <div class="col-md-6 left-auth-panel">
+      <div id="imageCarousel" class="h-100 w-100 position-absolute top-0 start-0">
+        <img
+          *ngFor="let img of carouselImages; let i = index"
+          [src]="img.url"
+          [alt]="img.alt"
+          class="carousel-image"
+          [class.active]="i === currentImageIndex"
+        />
+      </div>
+      <div class="image-overlay"></div>
+      <div class="left-panel-top">
+        <div class="auth-logo">BRIGHT FUTURE</div>
+      </div>
+      <div class="left-panel-bottom">
+        <h3 class="tagline">Capturing Moments,<br />Creating Memories</h3>
+        <div class="pagination-dots">
+          <span
+            *ngFor="let img of carouselImages; let i = index"
+            class="dot"
+            [class.active]="i === currentImageIndex"
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel: Login/Signup Form -->
+    <div class="col-md-6 right-auth-panel">
+      <!-- Signup Form -->
+      <form
+        *ngIf="showRegister"
+        (ngSubmit)="onRegister()"
+        #registerForm="ngForm"
+      >
+        <h2 class="form-title text-start">Create an account</h2>
+        <p class="switch-form-link text-start mb-4">
+          Already have an account?
+          <a href="#" (click)="toggleForm(); $event.preventDefault()">Log in</a>
+        </p>
+        <div class="form-group-custom">
+          <label for="fullName" class="form-label-custom">Full Name</label>
+          <input
+            type="text"
+            class="form-control-custom w-100"
+            id="fullName"
+            placeholder="e.g., John Doe"
+            name="fullName"
+            [(ngModel)]="registerData.fullName"
+            required
+          />
+        </div>
+        <div class="form-group-custom">
+          <label for="registerUsername" class="form-label-custom">Username</label>
+          <input
+            type="text"
+            class="form-control-custom w-100"
+            id="registerUsername"
+            [placeholder]="LABELS.USERNAME"
+            name="username"
+            [(ngModel)]="registerData.username"
+            required
+          />
+        </div>
+        <div class="form-group-custom">
+          <label for="registerEmail" class="form-label-custom">{{ LABELS.EMAIL }}</label>
+          <input
+            type="email"
+            class="form-control-custom w-100"
+            id="registerEmail"
+            [placeholder]="LABELS.EMAIL"
+            name="email"
+            [(ngModel)]="registerData.email"
+            required
+          />
+        </div>
+        <div class="form-group-custom password-input-group">
+          <label for="registerPassword" class="form-label-custom">{{ LABELS.PASSWORD }}</label>
+          <input
+            [type]="passwordFieldType"
+            class="form-control-custom w-100"
+            id="registerPassword"
+            [placeholder]="LABELS.PASSWORD"
+            name="password"
+            [(ngModel)]="registerData.password"
+            required
+          />
+        </div>
+        <div class="form-group-custom">
+          <label for="confirmPassword" class="form-label-custom">{{ LABELS.CONFIRM_PASSWORD }}</label>
+          <input
+            [type]="passwordFieldType"
+            class="form-control-custom w-100"
+            id="confirmPassword"
+            [placeholder]="LABELS.CONFIRM_PASSWORD"
+            name="confirmPassword"
+            [(ngModel)]="registerData.confirmPassword"
+            required
+          />
+        </div>
+        <div class="form-check form-check-custom mb-4">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="registerTermsCheck"
+            [(ngModel)]="registerData.terms"
+            name="registerTerms"
+            required
+          />
+          <label class="form-check-label" for="registerTermsCheck">
+            I agree to the <a href="#">Terms & Conditions</a>
+          </label>
+        </div>
+        <button class="btn btn-submit-custom" type="submit">
+          Create account
+        </button>
+        <div class="or-separator">Or register with</div>
+        <div class="d-grid gap-3">
+          <button class="btn btn-social" type="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google icon" width="24" height="24"/>
+            Google
+          </button>
+          <button class="btn btn-social" type="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" alt="Apple icon" width="24" height="24"/>
+            Apple
+          </button>
+        </div>
+        <p *ngIf="registerError" class="text-danger-custom text-center mt-3" role="alert" aria-live="polite">
+          {{ registerError }}
+        </p>
+      </form>
+
+      <!-- Login Form -->
+      <form *ngIf="!showRegister" (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <h2 class="form-title text-start">Welcome Back</h2>
+        <p class="switch-form-link text-start mb-4">
+          Don't have an account?
+          <a href="#" (click)="toggleForm(); $event.preventDefault()">Sign Up</a>
+        </p>
+
+        <!-- FIX: Changed the 'Username' field to 'Email' to match backend requirements. -->
+        <div class="form-group-custom">
+          <label for="loginEmail" class="form-label-custom">{{ LABELS.EMAIL }}</label>
+          <input
+            type="email"
+            class="form-control-custom w-100"
+            id="loginEmail"
+            placeholder="e.g., john.doe@example.com"
+            name="loginEmail"
+            [(ngModel)]="loginData.email"
+            required
+          />
+        </div>
+
+        <div class="form-group-custom password-input-group">
+          <label for="loginPassword" class="form-label-custom">{{ LABELS.PASSWORD }}</label>
+          <input
+            [type]="passwordFieldType"
+            class="form-control-custom w-100"
+            id="loginPassword"
+            [placeholder]="LABELS.PASSWORD"
+            name="loginPassword"
+            [(ngModel)]="loginData.password"
+            required
+          />
+        </div>
+        <button class="btn btn-submit-custom" type="submit">
+          {{ BUTTONS.LOGIN }}
+        </button>
+        <div class="or-separator">Or log in with</div>
+        <div class="d-grid gap-3">
+          <button class="btn btn-social" type="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google icon" width="24" height="24"/>
+            Google
+          </button>
+          <button class="btn btn-social" type="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" alt="Apple icon" width="24" height="24"/>
+            Apple
+          </button>
+        </div>
+        <p *ngIf="loginError" class="text-danger-custom text-center mt-3" role="alert" aria-live="polite">
+          {{ loginError }}
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

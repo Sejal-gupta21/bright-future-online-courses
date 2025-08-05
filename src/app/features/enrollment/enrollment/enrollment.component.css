@@ -1,0 +1,174 @@
+/* enrollment.component.css - Bootstrap & Angular Material Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #3c4768; /* Light background for the page */
+}
+
+.container {
+  max-width: 800px; /* Slightly wider form container */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0 15px;
+}
+
+.enrollment-card {
+  background-color: #8b87a1;
+  padding: 3rem; /* More generous padding */
+  border-radius: 1.5rem; /* More pronounced rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+}
+
+label {
+  font-weight: 600;
+  color: #343a40; /* Darker labels */
+  margin-bottom: 0.6rem; /* More spacing */
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.75rem; /* More rounded inputs */
+  border: 1px solid #ced4da;
+  padding: 0.85rem 1.2rem; /* Slightly more padding */
+  transition: all 0.2s ease-in-out;
+  background-color: #fcfcfc; /* Very light background */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6a82fb; /* Primary blue focus */
+  box-shadow: 0 0 0 0.25rem rgba(106, 130, 251, 0.25); /* Custom focus ring */
+  background-color: #ffffff;
+  outline: none;
+}
+
+.form-check-input {
+  border-radius: 0.35rem; /* Slightly more rounded checkbox */
+  border: 1px solid #ced4da;
+  width: 1.2em; /* Standard size */
+  height: 1.2em;
+}
+.form-check-input:checked {
+  background-color: #6a82fb;
+  border-color: #6a82fb;
+}
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(106, 130, 251, 0.25);
+  outline: none;
+}
+
+/* Custom Button Styling */
+.btn-save-custom {
+   border: 2px solid #6c757d; /* Muted grey border */
+  color: #6c757d;
+  background-color: transparent;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  display: flex; /* For icon alignment */
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-save-custom:hover {
+  background-color: #cae1f5;
+  color: #1a1717;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-back-custom {
+  border: 2px solid #6c757d; /* Muted grey border */
+  color: #6c757d;
+  background-color: transparent;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  display: flex; /* For icon alignment */
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-back-custom:hover {
+  background-color: #cae1f5;
+  color: #1a1717;
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+  transform: translateY(-3px);
+}
+
+.invalid-feedback {
+  font-size: 0.875em;
+  color: #dc3545; /* Bootstrap danger color */
+  margin-top: 0.25rem;
+}
+
+.gender-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* More space between options */
+}
+
+.gender-options label {
+  font-weight: normal;
+  color: #495057;
+  margin-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.gender-options input[type="radio"] {
+  margin-right: 8px; /* Space between radio and label text */
+  cursor: pointer;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align to end by default */
+  gap: 1.5rem; /* Space between buttons */
+  margin-top: 2rem;
+}
+
+/* Snackbar styles (Angular Material specific, but defined here for visual consistency) */
+::ng-deep .snackbar-error {
+  background-color: #d32f2f !important;
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+::ng-deep .snackbar-success {
+  background-color: #388e3c !important;
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(56, 142, 60, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 575.98px) { /* Extra small devices */
+  .enrollment-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-buttons {
+    flex-direction: column; /* Stack buttons on very small screens */
+    gap: 1rem;
+  }
+  .btn-save-custom, .btn-back-custom {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+  }
+}

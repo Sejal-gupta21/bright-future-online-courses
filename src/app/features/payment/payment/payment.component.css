@@ -1,0 +1,131 @@
+/*
+ * MODERN & ATTRACTIVE PAYMENT COMPONENT STYLES
+ * ------------------------------------------------
+ * This stylesheet uses a dark theme with glassmorphism,
+ * gradients, and animations for a premium feel.
+ */
+
+/* -- Import a modern font (optional but recommended) -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* -- Add a container to set the theme (apply to a parent element if needed) -- */
+:host {
+  display: block;
+  background: linear-gradient(135deg, #1c1e2d, #3f3a54);
+  min-height: 100vh; /* Ensures the gradient fills the screen */
+  font-family: 'Poppins', sans-serif;
+  padding-top: 5rem; /* Give some space from the top */
+}
+
+/* -- The main payment card with a glass effect -- */
+.card {
+  background: rgba(122, 115, 115, 0.511); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px); /* The "glass" effect */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(246, 244, 244, 0.37);
+  color: #fff;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* -- Card Header -- */
+.card h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+}
+
+.gpay-btn-center {
+  width: 100%;
+  align-self: center;
+  padding-left: 30%;
+}
+/* -- Google Pay Button Container -- */
+/* The button itself is an iframe, but we can style its container */
+google-pay-button {
+  display: block;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px; /* Standard Google Pay button height */
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures button corners are rounded */
+  transition: transform 0.3s ease;
+}
+
+google-pay-button:hover {
+  transform: scale(1.02);
+}
+
+/* -- Processing/Loading State -- */
+.payment-loader {
+  padding-left: 47%;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  animation: fadeIn 0.5s ease;
+}
+
+/* -- Success State Container -- */
+.success-state {
+  animation: slideInUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* -- Success Icon Animation -- */
+.success-state .material-icons {
+  font-size: 5rem; /* Larger icon */
+  color: #28a745;
+  background: radial-gradient(circle, rgba(40, 167, 69, 0.2), transparent 70%);
+  border-radius: 50%;
+  animation: pulseIcon 1.5s infinite;
+}
+
+.success-state h4 {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.success-state p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* -- Custom "Go to My Courses" Button -- */
+.btn-go-to-courses {
+  background: #ffffff; /* UPDATED: White background */
+  border: none;
+  border-radius: 50px; /* This creates fully rounded corners (pill shape) */
+  padding: 12px 30px;
+  font-weight: 600;
+  color: #3c325c; /* UPDATED: Dark text color for contrast */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* UPDATED: More subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.load-heading{
+  padding-left: 40%;
+}
+
+.btn-go-to-courses:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* UPDATED: Enhanced shadow on hover */
+  background: #f8f9fa; /* Optional: Slightly off-white background on hover */
+}
+
+/* -- Keyframe Animations -- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseIcon {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(40, 167, 69, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}

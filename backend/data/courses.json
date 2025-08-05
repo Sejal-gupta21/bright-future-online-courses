@@ -1,0 +1,348 @@
+[
+  {
+    "id": "c1",
+    "title": "Mastering Angular: From Zero to Hero",
+    "description": "Learn Angular fundamentals, components, services, routing, and more to build robust web applications.",
+    "fullDescription": "Embark on a comprehensive journey to become a proficient Angular developer. This course covers everything from the very basics of setting up your development environment to advanced concepts like state management with NgRx, lazy loading, and server-side rendering. You'll dive deep into Angular's component architecture, understand how to build reusable services, implement robust routing, and manage forms effectively. Practical exercises and real-world project development are integrated throughout the curriculum to solidify your understanding. By the end, you'll be capable of building complex, single-page applications that are scalable, maintainable, and highly performant. This is an ideal course for beginners looking to start their frontend development career or experienced developers wanting to master the Angular framework. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 49.99,
+    "imageUrl": "angular poster.webp",
+    "instructor": "John Doe",
+    "rating": 4.7,
+    "students": 15000,
+    "category": "Web Development",
+    "lastUpdatedDate": "12/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "French [Auto]", "Spanish [Auto]"],
+    "numRatings": 8500,
+    "provider": "Angular Academy",
+    "isPremium": false,
+    "originalPrice": 249.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Build dynamic and responsive single-page applications with Angular.",
+      "Master component-based architecture, services, and dependency injection.",
+      "Implement advanced routing, state management, and form handling.",
+      "Understand best practices for performance optimization and testing."
+    ],
+    "requirements": [
+      "Basic understanding of HTML, CSS, and JavaScript.",
+      "Familiarity with fundamental programming concepts."
+    ],
+    "whoIsFor": [
+      "Beginner to intermediate JavaScript developers.",
+      "Anyone aspiring to become a professional frontend developer.",
+      "Developers looking to migrate from other frameworks to Angular."
+    ]
+  },
+  {
+    "id": "c2",
+    "title": "AWS Certified Solutions Architect - Associate",
+    "description": "Prepare for the AWS Solutions Architect Associate exam with hands-on labs and real-world scenarios.",
+    "fullDescription": "This comprehensive course is designed to prepare you for the AWS Certified Solutions Architect - Associate (SAA-C03) exam. You'll gain a deep understanding of AWS architectural principles and services, including VPC, EC2, S3, RDS, Lambda, DynamoDB, and more. Through a series of practical, hands-on labs, you'll learn how to design and deploy fault-tolerant, highly available, and scalable applications on AWS. We'll cover security best practices, cost optimization strategies, and operational excellence. This course is constantly updated to reflect the latest AWS services and exam objectives. Whether you're a system administrator, developer, or IT professional, this course will equip you with the knowledge and skills needed to pass the certification exam and build robust cloud solutions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 79.99,
+    "imageUrl": "aws.jpg",
+    "instructor": "Jane Smith",
+    "rating": 4.8,
+    "students": 25000,
+    "category": "Cloud Computing",
+    "lastUpdatedDate": "11/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "German [Auto]"],
+    "numRatings": 18000,
+    "provider": "CloudMasters Inc.",
+    "isPremium": true,
+    "originalPrice": 399.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Design and deploy scalable, highly available, and fault-tolerant systems on AWS.",
+      "Understand core AWS services like EC2, S3, RDS, VPC, and Lambda.",
+      "Implement security best practices and cost-optimization strategies.",
+      "Prepare thoroughly for the AWS Certified Solutions Architect - Associate exam."
+    ],
+    "requirements": [
+      "Basic understanding of IT infrastructure concepts.",
+      "Familiarity with cloud computing is a plus but not required."
+    ],
+    "whoIsFor": [
+      "IT professionals seeking AWS Solutions Architect Associate certification.",
+      "Developers looking to deploy applications on AWS.",
+      "Anyone interested in learning cloud architecture on AWS."
+    ]
+  },
+  {
+    "id": "c3",
+    "title": "Microsoft Azure Fundamentals AZ-900",
+    "description": "Understand the core Azure services, concepts, and prepare for the AZ-900 certification.",
+    "fullDescription": "This course provides foundational knowledge of cloud services and how those services are provided with Microsoft Azure. You'll learn about core Azure concepts, including architectural components and core services like compute, networking, storage, and databases. The course also covers identity, governance, privacy, and compliance features, along with cost management and service level agreements. It's perfectly aligned with the AZ-900 Microsoft Azure Fundamentals exam objectives, making it an ideal starting point for anyone looking to enter the world of Azure cloud computing. Through clear explanations and practical examples, you'll build a solid understanding of Azure's capabilities and its benefits for businesses. This is an essential course for IT professionals, developers, and anyone interested in understanding cloud basics with Microsoft Azure. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 39.99,
+    "imageUrl": "azure.png",
+    "instructor": "Alice Brown",
+    "rating": 4.5,
+    "students": 10000,
+    "category": "Cloud Computing",
+    "lastUpdatedDate": "10/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "Spanish [Auto]"],
+    "numRatings": 7500,
+    "provider": "Azure Insights",
+    "isPremium": false,
+    "originalPrice": 199.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Understand cloud concepts and core Azure services.",
+      "Explore security, privacy, compliance, and trust in Azure.",
+      "Learn about Azure pricing, service level agreements, and support.",
+      "Prepare for the Microsoft Azure Fundamentals AZ-900 certification exam."
+    ],
+    "requirements": [
+      "No prior Azure experience required.",
+      "Basic computer literacy."
+    ],
+    "whoIsFor": [
+      "Individuals looking to start a career in cloud computing with Azure.",
+      "IT professionals, developers, and business users interested in Azure fundamentals."
+    ]
+  },
+  {
+    "id": "c4",
+    "title": "C Programming: Absolute Beginner to Advanced",
+    "description": "A comprehensive guide to C programming, from basic syntax to advanced data structures.",
+    "fullDescription": "Dive into the world of C programming with this comprehensive course designed for absolute beginners and those looking to deepen their understanding. You'll start with the foundational concepts like variables, data types, operators, and control flow statements. As you progress, you'll explore more complex topics such as pointers, arrays, strings, functions, and file I/O. The course places a strong emphasis on practical problem-solving through numerous coding exercises and projects. Advanced topics like dynamic memory allocation, data structures (linked lists, stacks, queues), and an introduction to algorithms will also be covered, providing you with a solid base for system-level programming and competitive programming. This course aims to make you a confident C programmer, capable of writing efficient and robust code. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 29.99,
+    "imageUrl": "c-programming.jpg",
+    "instructor": "Robert White",
+    "rating": 4.6,
+    "students": 8000,
+    "category": "Programming Languages",
+    "lastUpdatedDate": "09/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]"],
+    "numRatings": 6000,
+    "provider": "CodeCraft Academy",
+    "isPremium": false,
+    "originalPrice": 149.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Master C programming from basics to advanced concepts.",
+      "Understand pointers, arrays, strings, and functions.",
+      "Learn about dynamic memory allocation and file I/O.",
+      "Gain an introduction to data structures and algorithms in C."
+    ],
+    "requirements": [
+      "No prior programming experience required.",
+      "A computer with an internet connection."
+    ],
+    "whoIsFor": [
+      "Absolute beginners in programming.",
+      "Students learning C for academic purposes.",
+      "Anyone interested in low-level programming or competitive programming."
+    ]
+  },
+  {
+    "id": "c5",
+    "title": "Node.js and Express.js: The Complete Guide",
+    "description": "Build powerful and scalable backend APIs with Node.js, Express.js, and MongoDB.",
+    "fullDescription": "This course will take you from a complete beginner to an advanced Node.js and Express.js developer. You'll learn to build robust RESTful APIs, integrate with MongoDB databases, and handle authentication and authorization. We cover topics like middleware, routing, template engines, asynchronous JavaScript, and error handling. Through hands-on projects, you'll develop a deep understanding of how to build scalable and secure backend applications. This course is constantly updated with the latest best practices and features, ensuring you get the most relevant knowledge for modern web development. You'll also learn about deployment strategies and how to secure your applications. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 59.99,
+    "imageUrl": "express.jpg",
+    "instructor": "Chris Green",
+    "rating": 4.7,
+    "students": 20000,
+    "category": "Backend Development",
+    "lastUpdatedDate": "12/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "Portuguese [Auto]"],
+    "numRatings": 15000,
+    "provider": "Backend Builders",
+    "isPremium": false,
+    "originalPrice": 299.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Build powerful RESTful APIs with Node.js and Express.js.",
+      "Integrate and manage data with MongoDB.",
+      "Implement user authentication and authorization.",
+      "Understand middleware, routing, and deployment best practices."
+    ],
+    "requirements": [
+      "Basic understanding of JavaScript."
+    ],
+    "whoIsFor": [
+      "Frontend developers wanting to learn backend development.",
+      "Full-stack developers looking to master the MERN stack.",
+      "Anyone interested in building scalable server-side applications."
+    ]
+  },
+  {
+    "id": "c6",
+    "title": "Flutter & Dart - The Complete Guide",
+    "description": "Master Flutter and Dart to build beautiful, natively compiled applications for mobile, web, and desktop.",
+    "fullDescription": "This comprehensive Flutter and Dart course will take you from zero to hero in building beautiful, natively compiled applications for mobile (iOS & Android), web, and desktop from a single codebase. You'll learn Dart programming language fundamentals, then dive deep into Flutter widgets, state management (Provider, Riverpod, BLoC), navigation, API integration, and database persistence. The course includes multiple hands-on projects that will equip you with practical skills to build real-world applications. We cover best practices, performance optimization, and how to deploy your Flutter apps to various platforms. Whether you're an aspiring mobile developer or a web developer looking to expand your skills, this course offers a complete learning path. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 69.99,
+    "imageUrl": "Flutter-poster.png",
+    "instructor": "Michael Blue",
+    "rating": 4.9,
+    "students": 30000,
+    "category": "Mobile Development",
+    "lastUpdatedDate": "11/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "Spanish [Auto]", "German [Auto]"],
+    "numRatings": 25000,
+    "provider": "Mobile Dev Hub",
+    "isPremium": true,
+    "originalPrice": 349.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Build cross-platform applications with Flutter and Dart.",
+      "Master Flutter widgets, state management, and navigation.",
+      "Integrate APIs, handle local storage, and deploy apps.",
+      "Develop beautiful and performant UIs for mobile, web, and desktop."
+    ],
+    "requirements": [
+      "Basic programming knowledge (any language helps).",
+      "A computer with Flutter SDK installed (setup guide included)."
+    ],
+    "whoIsFor": [
+      "Developers interested in building cross-platform mobile apps.",
+      "Web developers looking to transition to mobile or desktop app development.",
+      "Anyone aspiring to become a Flutter developer."
+    ]
+  },
+  {
+    "id": "c7",
+    "title": "MongoDB - The Complete Developer's Guide 2024",
+    "description": "Learn MongoDB from scratch, including Mongoose, aggregation, and performance tuning.",
+    "fullDescription": "Become a MongoDB expert with this complete developer's guide for 2024. This course takes you from the absolute basics of MongoDB installation and CRUD operations to advanced topics like aggregation pipelines, indexing for performance, and replica sets for high availability. You'll learn how to design flexible NoSQL schemas, interact with MongoDB using Node.js and Mongoose, and perform complex data analytics. The course covers security best practices, backup and restore strategies, and monitoring your MongoDB deployments. With hands-on exercises and real-world examples, you'll gain practical experience in building scalable and efficient database solutions. This is an ideal course for backend developers, full-stack developers, and database administrators looking to master MongoDB. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 44.99,
+    "imageUrl": "mongoDB.png",
+    "instructor": "Sarah Red",
+    "rating": 4.6,
+    "students": 12000,
+    "category": "Databases",
+    "lastUpdatedDate": "08/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]"],
+    "numRatings": 9000,
+    "provider": "DataForge Labs",
+    "isPremium": false,
+    "originalPrice": 224.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Master MongoDB CRUD operations and schema design.",
+      "Learn advanced topics like aggregation, indexing, and replica sets.",
+      "Integrate MongoDB with Node.js applications using Mongoose.",
+      "Understand performance tuning, security, and backup strategies."
+    ],
+    "requirements": [
+      "Basic understanding of databases (SQL knowledge is a plus, but not required).",
+      "Familiarity with JavaScript is helpful for Mongoose integration."
+    ],
+    "whoIsFor": [
+      "Backend developers working with Node.js.",
+      "Full-stack developers building NoSQL database solutions.",
+      "Anyone interested in becoming proficient with MongoDB."
+    ]
+  },
+  {
+    "id": "c8",
+    "title": "Node.js, Express, MongoDB & More: The Masterclass",
+    "description": "Become a full-stack JavaScript developer by mastering Node.js, Express, and MongoDB.",
+    "fullDescription": "This masterclass provides an in-depth journey into becoming a highly skilled full-stack JavaScript developer. You'll start with the fundamentals of Node.js and npm, then rapidly move into building complex, scalable APIs with Express.js. Database integration with MongoDB and Mongoose is thoroughly covered, including advanced querying and data modeling. The course emphasizes building secure applications with topics like JWT authentication, password hashing, and input validation. You'll also explore best practices for error handling, logging, and deploying your applications to cloud platforms. This is an advanced course that goes beyond the basics, offering practical insights and techniques used in professional development environments. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 64.99,
+    "imageUrl": "node.jpg",
+    "instructor": "David Black",
+    "rating": 4.8,
+    "students": 22000,
+    "category": "Backend Development",
+    "lastUpdatedDate": "12/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "Spanish [Auto]"],
+    "numRatings": 19000,
+    "provider": "FullStack Pro",
+    "isPremium": true,
+    "originalPrice": 324.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Build robust and scalable backend APIs with Node.js and Express.",
+      "Master MongoDB for data storage and management.",
+      "Implement JWT authentication and advanced security features.",
+      "Learn best practices for deployment, error handling, and performance."
+    ],
+    "requirements": [
+      "Solid understanding of JavaScript fundamentals.",
+      "Familiarity with basic web concepts (HTTP, REST)."
+    ],
+    "whoIsFor": [
+      "Intermediate to advanced JavaScript developers.",
+      "Anyone aspiring to become a full-stack MERN stack developer.",
+      "Developers looking to build high-performance backend systems."
+    ]
+  },
+  {
+    "id": "c9",
+    "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+    "description": "Dive deep into React.js with hooks, React Router, Redux, and build complex user interfaces.",
+    "fullDescription": "This is the most comprehensive and up-to-date React.js course, covering everything from the basics of React components and JSX to advanced topics like Hooks, React Router for navigation, and Redux for complex state management. You'll learn to build modern, reactive user interfaces with functional components, understand the React ecosystem, and optimize your applications for performance. The course is packed with practical examples, real-world projects, and best practices used by professional React developers. We'll also touch upon testing React components and integrating with backend APIs. Whether you're new to React or looking to deepen your existing knowledge, this course provides a complete learning path. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 54.99,
+    "imageUrl": "react.png",
+    "instructor": "Emily White",
+    "rating": 4.7,
+    "students": 28000,
+    "category": "Frontend Development",
+    "lastUpdatedDate": "12/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]", "German [Auto]", "Spanish [Auto]"],
+    "numRatings": 23000,
+    "provider": "React Gurus",
+    "isPremium": false,
+    "originalPrice": 274.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Build modern, reactive user interfaces with React Hooks.",
+      "Master state management with Context API and Redux.",
+      "Implement robust routing with React Router.",
+      "Optimize React applications for performance and understand best practices."
+    ],
+    "requirements": [
+      "Basic understanding of JavaScript, HTML, and CSS."
+    ],
+    "whoIsFor": [
+      "Web developers aspiring to become professional React developers.",
+      "Frontend developers looking to upgrade their skills to React.",
+      "Anyone interested in building modern single-page applications."
+    ]
+  },
+  {
+    "id": "c10",
+    "title": "SQL - The Complete Guide",
+    "description": "Learn SQL from basic queries to advanced database management and optimization.",
+    "fullDescription": "This comprehensive SQL course is designed to take you from a complete beginner to a confident SQL user. You'll start with fundamental SQL concepts like selecting, filtering, and ordering data, then move on to more advanced topics such as joins, subqueries, and window functions. The course covers data manipulation (INSERT, UPDATE, DELETE) and data definition (CREATE, ALTER, DROP). You'll gain hands-on experience with practical exercises, learning how to design databases, manage data, and optimize queries for performance. We'll explore different SQL dialects (e.g., MySQL, PostgreSQL, SQL Server basics) to give you a broad understanding. This course is essential for aspiring data analysts, database administrators, and developers who need strong database skills. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "price": 34.99,
+    "imageUrl": "sql.avif",
+    "instructor": "Peter Green",
+    "rating": 4.5,
+    "students": 9000,
+    "category": "Databases",
+    "lastUpdatedDate": "10/2024",
+    "language": "English",
+    "subtitles": ["English [Auto]"],
+    "numRatings": 7000,
+    "provider": "Database Dojo",
+    "isPremium": false,
+    "originalPrice": 174.99,
+    "discountPercentage": 80,
+    "keyLearningPoints": [
+      "Master fundamental SQL queries for data retrieval and manipulation.",
+      "Understand advanced SQL concepts like joins, subqueries, and window functions.",
+      "Learn database design principles and data definition language.",
+      "Optimize SQL queries for better performance."
+    ],
+    "requirements": [
+      "No prior database or SQL experience needed."
+    ],
+    "whoIsFor": [
+      "Anyone aspiring to be a data analyst, data scientist, or database administrator.",
+      "Developers needing strong database interaction skills.",
+      "Students learning SQL for academic or personal projects."
+    ]
+  }
+]
