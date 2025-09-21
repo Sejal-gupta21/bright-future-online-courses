@@ -6,7 +6,6 @@
  */
 
 /* -- Import a modern font (optional but recommended) -- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* -- Add a container to set the theme (apply to a parent element if needed) -- */
 :host {

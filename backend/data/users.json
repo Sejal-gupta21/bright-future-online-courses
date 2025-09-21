@@ -47,5 +47,12 @@
     "enrolledCourseIds": [
       "c2"
     ]
+  },
+  {
+    "id": "c06b29c2-3c1b-47aa-96b1-b5041359179d",
+    "name": "pinks",
+    "email": "pinku@gmail.com",
+    "password": "$2b$10$BxOCUL4CNgsmPM986O4aguOVdqtNjQKR3P6RcOp3CK6dRy7NnErNO",
+    "enrolledCourseIds": []
   }
 ]
